@@ -1,0 +1,57 @@
+CREATE TABLE `dis_characters` (
+  `id` int(11) NOT NULL,
+  `movie_title` text,
+  `release_date` text,
+  `hero` text,
+  `villain` text,
+  `song` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+
+CREATE TABLE `dis_voices` (
+  `id` int(11) NOT NULL,
+  `character` text,
+  `voice_actor` text,
+  `movie` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `disneylist` (
+  `id` int(11) NOT NULL,
+  `TITLE` text,
+  `YEAR` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `imdbdisney` (
+  `Title` text,
+  `year` text,
+  `Metascore` int(11) DEFAULT NULL,
+  `IMDB` double DEFAULT NULL,
+  `link` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `movie_disney_gross_sales1` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Year` int(11) NOT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `Worldwide gross` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `Budget` varchar(20) DEFAULT NULL,
+  `Total Sales` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `wikidisney` (
+  `id` int(11) NOT NULL,
+  `Type of Film` text,
+  `Title` text,
+  `US Release` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
